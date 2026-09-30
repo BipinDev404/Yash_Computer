@@ -1,0 +1,6 @@
+{
+  "name": "Yash Computer | Premium Computer & Laptop Store, Aurangabad Bihar",
+  "description": "Premium computer, laptop and tech hardware store in MG Road, Aurangabad Bihar. Sales, upgrades, repairs and custom PC builds.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -80,10 +80,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Search Trigger Button */}
             <button
               onClick={onOpenSearch}
-              className="flex items-center gap-2 px-3 py-2 text-xs font-medium text-zinc-600 hover:text-zinc-950 bg-zinc-100 hover:bg-zinc-200/80 rounded-lg transition-colors"
+              className="flex items-center justify-center gap-2 px-3.5 py-2.5 min-h-[44px] text-xs font-medium text-zinc-700 hover:text-zinc-950 bg-zinc-100 hover:bg-zinc-200/80 active:bg-zinc-200 rounded-xl transition-all"
               aria-label="Search tech and laptops"
             >
-              <Search className="w-3.5 h-3.5 text-zinc-500" />
+              <Search className="w-4 h-4 text-zinc-600" />
               <span className="hidden sm:inline">Search</span>
               <kbd className="hidden lg:inline-block px-1.5 py-0.5 text-[9px] font-mono text-zinc-400 bg-white rounded border border-zinc-200">
                 ⌘K
@@ -95,19 +95,19 @@ export const Navbar: React.FC<NavbarProps> = ({
               href={getWhatsAppUrl()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium text-white bg-zinc-900 hover:bg-zinc-800 rounded-lg transition-colors whitespace-nowrap shadow-xs"
+              className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 min-h-[44px] text-xs font-semibold text-white bg-zinc-950 hover:bg-zinc-800 active:bg-zinc-800 rounded-xl transition-all whitespace-nowrap shadow-xs"
             >
-              <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
+              <MessageSquare className="w-4 h-4 text-emerald-400" />
               <span className="hidden xs:inline">WhatsApp</span>
             </a>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 text-zinc-700 hover:text-zinc-950 hover:bg-zinc-100 rounded-lg transition-colors"
+              className="md:hidden flex items-center justify-center min-h-[44px] min-w-[44px] p-2 text-zinc-800 hover:text-zinc-950 hover:bg-zinc-100 active:bg-zinc-200 rounded-xl transition-colors"
               aria-label="Toggle Navigation Menu"
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>

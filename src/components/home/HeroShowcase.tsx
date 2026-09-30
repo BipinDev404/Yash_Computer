@@ -42,10 +42,10 @@ export const HeroShowcase: React.FC<HeroShowcaseProps> = ({
           </p>
 
           {/* Action CTAs */}
-          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
             <button
               onClick={onExploreProducts}
-              className="px-6 py-3 text-sm font-semibold text-white bg-zinc-950 hover:bg-zinc-800 rounded-xl transition-all duration-200 flex items-center gap-2 shadow-xs group"
+              className="w-full sm:w-auto min-h-[48px] px-7 py-3 text-sm font-semibold text-white bg-zinc-950 hover:bg-zinc-800 active:scale-[0.98] rounded-xl transition-all duration-200 flex items-center justify-center gap-2 shadow-xs group"
             >
               <span>Explore Products</span>
               <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:translate-x-0.5 transition-transform" />
@@ -53,7 +53,7 @@ export const HeroShowcase: React.FC<HeroShowcaseProps> = ({
 
             <button
               onClick={onVisitStore}
-              className="px-6 py-3 text-sm font-semibold text-zinc-800 bg-white hover:bg-zinc-100/80 rounded-xl transition-all duration-200 border border-zinc-200 flex items-center gap-2"
+              className="w-full sm:w-auto min-h-[48px] px-7 py-3 text-sm font-semibold text-zinc-800 bg-white hover:bg-zinc-100/80 active:scale-[0.98] rounded-xl transition-all duration-200 border border-zinc-200 flex items-center justify-center gap-2"
             >
               <MapPin className="w-4 h-4 text-zinc-500" />
               <span>Visit Store</span>

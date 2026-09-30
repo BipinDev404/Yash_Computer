@@ -91,14 +91,14 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
             </div>
           </div>
 
-          {/* Category Tabs (Single-line interactive scroll) */}
-          <div className="flex items-center gap-1.5 overflow-x-auto pb-1 pt-1 no-scrollbar">
+          {/* Category Tabs (Single-line interactive scroll with min 44px hitboxes) */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 pt-1 no-scrollbar snap-x snap-mandatory">
             <button
               onClick={() => setSelectedCategory('all')}
-              className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+              className={`snap-start min-h-[44px] px-4 py-2 text-xs font-semibold rounded-xl transition-all whitespace-nowrap shrink-0 border ${
                 selectedCategory === 'all'
-                  ? 'bg-zinc-950 text-white'
-                  : 'bg-zinc-100 hover:bg-zinc-200/70 text-zinc-700'
+                  ? 'bg-zinc-950 text-white border-zinc-950 shadow-xs'
+                  : 'bg-zinc-100 hover:bg-zinc-200/70 text-zinc-700 border-zinc-200/60'
               }`}
             >
               All Hardware ({productsData.length})
@@ -108,10 +108,10 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.slug)}
-                className={`px-3.5 py-1.5 text-xs font-semibold rounded-lg transition-colors whitespace-nowrap shrink-0 ${
+                className={`snap-start min-h-[44px] px-4 py-2 text-xs font-semibold rounded-xl transition-all whitespace-nowrap shrink-0 border ${
                   selectedCategory === cat.slug
-                    ? 'bg-zinc-950 text-white'
-                    : 'bg-zinc-100 hover:bg-zinc-200/70 text-zinc-700'
+                    ? 'bg-zinc-950 text-white border-zinc-950 shadow-xs'
+                    : 'bg-zinc-100 hover:bg-zinc-200/70 text-zinc-700 border-zinc-200/60'
                 }`}
               >
                 {cat.name}

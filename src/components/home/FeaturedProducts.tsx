@@ -90,14 +90,14 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                   {/* Pricing & Actions */}
                   <div className="pt-4 border-t border-zinc-100 flex items-center justify-between gap-2">
                     <div>
-                      <span className="text-[11px] text-zinc-400 block font-mono">AVAILABILITY</span>
+                      <span className="text-[10px] text-zinc-400 block font-mono">AVAILABILITY</span>
                       <span className="text-xs font-semibold text-zinc-900">{product.priceNote}</span>
                     </div>
 
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => onSelectProduct(product)}
-                        className="px-3 py-1.5 text-xs font-semibold text-zinc-800 bg-zinc-100 hover:bg-zinc-200/80 rounded-lg transition-colors"
+                        className="min-h-[44px] min-w-[44px] px-3.5 py-2 text-xs font-semibold text-zinc-800 bg-zinc-100 hover:bg-zinc-200 active:bg-zinc-200 rounded-xl transition-colors flex items-center justify-center"
                       >
                         View
                       </button>
@@ -105,10 +105,10 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                         href={getProductWhatsAppUrl(product.name, product.brand)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-1.5 text-white bg-zinc-900 hover:bg-zinc-800 rounded-lg transition-colors flex items-center justify-center"
+                        className="min-h-[44px] min-w-[44px] px-3 py-2 text-white bg-zinc-950 hover:bg-zinc-800 active:bg-zinc-800 rounded-xl transition-colors flex items-center justify-center shadow-xs"
                         title="Ask on WhatsApp"
                       >
-                        <MessageSquare className="w-4 h-4 text-emerald-400" />
+                        <MessageSquare className="w-4 h-4 text-emerald-400 shrink-0" />
                       </a>
                     </div>
                   </div>

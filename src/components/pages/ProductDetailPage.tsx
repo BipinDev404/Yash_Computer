@@ -190,7 +190,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
 
         {/* Related Products */}
         {relatedProducts.length > 0 && (
-          <div className="mt-16">
+          <div className="mt-16 mb-12 md:mb-0">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-2xl font-bold text-zinc-950 tracking-tight">
                 Similar Hardware & Accessories
@@ -219,6 +219,27 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
             </div>
           </div>
         )}
+
+        {/* Mobile Sticky Bottom Enquiry Bar (md:hidden) */}
+        <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-white/95 backdrop-blur-xl border-t border-zinc-200 p-3 pb-safe shadow-2xl flex items-center gap-2">
+          <a
+            href={getProductWhatsAppUrl(product.name, product.brand)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 h-12 bg-zinc-950 text-white font-semibold text-xs rounded-xl flex items-center justify-center gap-2 shadow-xs active:scale-[0.98] transition-all"
+          >
+            <MessageSquare className="w-4 h-4 text-emerald-400 shrink-0" />
+            <span>Ask Price on WhatsApp</span>
+          </a>
+
+          <a
+            href={`tel:${businessData.phone}`}
+            className="w-12 h-12 bg-zinc-100 hover:bg-zinc-200 text-zinc-900 rounded-xl flex items-center justify-center border border-zinc-200 active:scale-[0.98] transition-all shrink-0"
+            title="Call Store"
+          >
+            <Phone className="w-4 h-4 text-zinc-800" />
+          </a>
+        </div>
       </div>
     </div>
   );
